@@ -347,7 +347,15 @@ init_mathjax();
    		 src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
 		</script>
 
-		<!-- 以下實際利用  Brython 畫兩條直線 -->
+		<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫兩條直線 -->
 
 <canvas id="fourbar" width="600" height="600"></canvas>
 
@@ -400,9 +408,10 @@ ctx.strokeStyle = "blue"
 ctx.stroke()
 ctx.closePath()
 </script>
-            
-       
-		    
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
