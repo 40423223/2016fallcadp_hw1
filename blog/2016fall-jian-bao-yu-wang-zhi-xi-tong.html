@@ -341,9 +341,23 @@ init_mathjax();
 		<p>將所得到的點座標 .csv 以 Excel 畫圖, 得到:</p>  
 	        <p><img src="./../資料/40423223-2.png" width="800" /></p>
 		<p>首先利用 Brython, 讀取資料目錄中的 40423223.csv 座標檔案, 然後以 splitlines() 及 split() 取出各點的 x 座標與 y 座標後, 將點連成路徑曲線如下:</p>  
-		<!-- 以下實際利用  Brython 畫兩條直線 -->
+		<!-- 導入 Brython 標準程式庫 -->
 
-<canvas id="fourbar" width="600" height="400"></canvas>
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫兩條直線 -->
+
+<canvas id="fourbar" width="600" height="600"></canvas>
 
 <div id="container1"></div>
 
@@ -393,10 +407,7 @@ ctx.strokeStyle = "blue"
 # 實際執行畫線
 ctx.stroke()
 ctx.closePath()
-		</div>
-            <!-- /.entry-content -->
-        </article>
-    </section>
+</script>
 
         </div>
         <div class="col-sm-3" id="sidebar">
